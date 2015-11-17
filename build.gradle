@@ -10,6 +10,15 @@ apply plugin: 'java'
 def mainClass  = "gov.llnl.lc.net.MultiThreadSSLServer"
 def bundleDescription = "Generic Client/Server package implemented using Java and TSL"
 
+def distFileName = "lc-jsecure-client-server"
+def buildDist    = 'build/dist'
+def nxtBuildNum  = "1"
+
+// the location of resources this package depends on, and will include
+def repoDist     = '../ldapotp-java-api/build/dist/'
+def depJarName1   = 'LcCommon'
+def depJarName2   = 'JLdapOtpInterface-2.00'
+
 // In this section you declare where to find the dependencies of your project
 // and in this case, all subprojects should be at the same level as this
 // project (get jars from the projects build/libs directory)
@@ -17,16 +26,16 @@ repositories {
 
     // location of my jars
        flatDir {
-        dirs '../ldapotp-java-api/build/dist/'
-        dirs '../ldapotp-java-api/build/dist/libs/'
+       dirs "${repoDist}"
+       dirs "${repoDist}lib/"
    }
 }
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
     // my dependent jars (see repos above, and leave off the .jar)
-    compile name: 'JLdapOtpInterface'
-    compile name: 'LcCommon'
+    compile name: "${depJarName1}"
+    compile name: "${depJarName2}"
 }
 
 task makeDistro() << {
