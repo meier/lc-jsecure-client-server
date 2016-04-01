@@ -68,6 +68,10 @@ public interface NetworkConstants
 {
   static final String NETWORK_PROP_FILE             = "NetworkProperties.file";
   static final String NETWORK_DEFAULT_FILENAME      = "./Network.properties";
+  static final String NET_DEBUG_LEVEL_KEY           = "SocketSession.debug";
+  static final String NET_DEBUG_ALL_LEVEL           = "all";
+  static final String NET_DEBUG_OFF_LEVEL           = "off";
+  static final String NET_DEBUG_DEFAULT_LEVEL       = NET_DEBUG_OFF_LEVEL;
   static final String NET_SERVICE_HOSTNAME_KEY      = "ServiceHost.name";
   static final String NET_SERVICE_NAME_KEY          = "Service.name";
   static final String NET_SERVICE_PORTNUM_KEY       = "Service.portNumber";

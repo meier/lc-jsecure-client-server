@@ -246,20 +246,24 @@ public class KeyStoreTools implements AuthenticationConstants, CommonLogger
 
     public X509Certificate[] getAcceptedIssuers()
     {
-      throw new UnsupportedOperationException();
+      if(tm != null)
+        return tm.getAcceptedIssuers();
+      return new X509Certificate[]{};
     }
 
     public void checkClientTrusted(X509Certificate[] chain, String authType)
         throws CertificateException
     {
-      throw new UnsupportedOperationException();
+      if(tm != null)
+        tm.checkClientTrusted(chain, authType);
     }
 
     public void checkServerTrusted(X509Certificate[] chain, String authType)
         throws CertificateException
     {
       this.chain = chain;
-      tm.checkServerTrusted(chain, authType);
+      if(tm != null)
+        tm.checkServerTrusted(chain, authType);
     }
   }
 }

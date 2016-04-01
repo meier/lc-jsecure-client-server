@@ -112,4 +112,9 @@ public class NetworkProperties extends Properties implements NetworkConstants, C
     java.lang.Integer value = new java.lang.Integer(getProperty(NET_SOCK_READ_TIMEOUT_KEY, NET_SOCK_READ_DEFAULT_TIMEOUT));
     return value.intValue();
   }
+  
+  public String getDebugLevel()
+  {
+    return getProperty(NET_DEBUG_LEVEL_KEY, NET_DEBUG_DEFAULT_LEVEL);
+  }
 }
