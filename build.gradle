@@ -180,6 +180,12 @@ task fatJar(type: Jar, dependsOn: classes) {
     with jar
 }
 
+javadoc {
+     options.addStringOption('Xmaxerrs',  '1000')
+     options.addStringOption('Xmaxwarns', '1000')
+ }
+
+
 artifacts {
     archives sourcesJar
     archives javadocJar
