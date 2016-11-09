@@ -17,7 +17,7 @@ def nxtBuildNum  = "1"
 // the location of resources this package depends on, and will include
 def repoDist     = '../ldapotp-java-api/build/dist/'
 def depJarName1   = 'LcCommon'
-def depJarName2   = 'JLdapOtpInterface-2.01'
+def depJarName2   = 'JLdapOtpInterface-2.02'
 
 // In this section you declare where to find the dependencies of your project
 // and in this case, all subprojects should be at the same level as this
