@@ -55,11 +55,11 @@
  ********************************************************************/
 package gov.llnl.lc.net;
 
-import gov.llnl.lc.time.TimeStamp;
-import gov.llnl.lc.util.SystemConstants;
-
 import java.io.Serializable;
 import java.util.Date;
+
+import gov.llnl.lc.time.TimeStamp;
+import gov.llnl.lc.util.SystemConstants;
 
 /**********************************************************************
  * This Class maintains all of the relevant information about a
@@ -314,6 +314,21 @@ public class ObjectSession implements Serializable, SystemConstants
   public String getHost()
   {
     return host;
+  }
+
+  /************************************************************
+   * Method Name:
+   *  setHost
+  **/
+  /**
+   * Sets the value of host
+   *
+   * @param host the host to set
+   *
+   ***********************************************************/
+  public void setHost(String host)
+  {
+    this.host = host;
   }
 
   /************************************************************
