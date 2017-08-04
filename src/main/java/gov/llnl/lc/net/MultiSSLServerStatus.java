@@ -56,13 +56,13 @@
  ********************************************************************/
 package gov.llnl.lc.net;
 
-import gov.llnl.lc.logging.CommonLogger;
-import gov.llnl.lc.time.TimeStamp;
-import gov.llnl.lc.util.SystemConstants;
-
 import java.io.Serializable;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+
+import gov.llnl.lc.logging.CommonLogger;
+import gov.llnl.lc.time.TimeStamp;
+import gov.llnl.lc.util.SystemConstants;
 
 
 /**********************************************************************
@@ -177,6 +177,51 @@ public class MultiSSLServerStatus  implements Serializable, CommonLogger, System
   public String getHost()
   {
     return host;
+  }
+
+  /************************************************************
+   * Method Name:
+   *  setHost
+  **/
+  /**
+   * Sets the value of host
+   *
+   * @param host the host to set
+   *
+   ***********************************************************/
+  public void setHost(String host)
+  {
+    this.host = host;
+  }
+
+  /************************************************************
+   * Method Name:
+   *  setCurrent_Sessions
+  **/
+  /**
+   * Sets the value of current_Sessions
+   *
+   * @param current_Sessions the current_Sessions to set
+   *
+   ***********************************************************/
+  public void setCurrent_Sessions(java.util.ArrayList<ObjectSession> current_Sessions)
+  {
+    Current_Sessions = current_Sessions;
+  }
+
+  /************************************************************
+   * Method Name:
+   *  setHistorical_Sessions
+  **/
+  /**
+   * Sets the value of historical_Sessions
+   *
+   * @param historical_Sessions the historical_Sessions to set
+   *
+   ***********************************************************/
+  public void setHistorical_Sessions(java.util.ArrayList<ObjectSession> historical_Sessions)
+  {
+    Historical_Sessions = historical_Sessions;
   }
 
   /************************************************************
